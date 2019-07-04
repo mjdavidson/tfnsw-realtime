@@ -64,6 +64,9 @@ const start = async () => {
   for (const mode of modes) {
     const tripUpdate = await getRealtimeTripUpdate(mode, FeedMessage);
     const vehicleUpdate = await getRealtimeVehiclePositions(mode, FeedMessage);
+
+    console.log(tripUpdate.entity[0]);
+    console.log(vehicleUpdate.entity[0]);
   }
 };
 
